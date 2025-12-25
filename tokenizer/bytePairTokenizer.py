@@ -17,5 +17,20 @@ def characterBasedTokenizer(text):
     return vocab
 
 
-characterBasedTokenizer("hello world")
+#haracterBasedTokenizer("hello world")
 
+
+import tiktoken 
+
+
+text=("hello world this is jeevandas welcome to my youtube channel")
+
+tokenizer=tiktoken.get_encoding("gpt2")
+
+encoded=tokenizer.encode(text=text)
+
+print(encoded)
+
+decoded=tokenizer.decode(encoded)
+
+print(f"decoded text : \n {decoded}")
